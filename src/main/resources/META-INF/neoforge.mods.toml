@@ -1,0 +1,37 @@
+modLoader = "javafml"
+loaderVersion = "${loaderVersionRange}"
+license = "MIT"
+#issueTrackerURL=""
+
+[[mods]]
+modId="ethylene"
+version="${modVersion}"
+displayName="Play With Mixins"
+#updateJSONURL=""
+#displayURL=""
+#logoFile="ethylene.png"
+#credits=""
+authors="TonimatasDEV"
+description='''
+Ethylene is a mod to load Bukkit/Spigot plugins in NeoForge.
+'''
+
+[[mixins]]
+config = "ethylene.mixins.json"
+
+[[accessTransformers]]
+file="META-INF/accesstransformer.cfg"
+
+[[dependencies.ethylene]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoVersionRange}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ethylene]]
+modId = "minecraft"
+type = "required"
+versionRange = "[${minecraftVersion}]"
+ordering = "NONE"
+side = "BOTH"
